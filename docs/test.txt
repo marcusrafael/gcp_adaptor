@@ -1,0 +1,4 @@
+# sudo apt get install httpie
+
+# http POST http://localhost:8001/policy2dnf/ < gcloud.json | python -mjson.tool
+http POST http://localhost:8001/policy2local/ < compute_dnf_gcp_fapmans.json | python -mjson.tool
