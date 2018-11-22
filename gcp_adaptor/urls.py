@@ -21,9 +21,18 @@ from adaptor import views, models
 from rest_framework import routers
 
 router = routers.DefaultRouter()
+router.register(r'tenant', views.TenantViewSet)
+router.register(r'apf', views.ApfViewSet)
+router.register(r'attribute', views.AttributeViewSet)
+router.register(r'operator', views.OperatorViewSet)
+router.register(r'value', views.ValueViewSet)
+router.register(r'hierarchy', views.HierarchyViewSet)
+router.register(r'attribute_mapping', views.AttributeMappingViewSet)
+router.register(r'operator_mapping', views.OperatorMappingViewSet)
+router.register(r'value_mapping', views.ValueMappingViewSet)
 
 urlpatterns = [
-    url(r'^', include(router.urls)),
     url(r'^policy2dnf/', views.AdaptorDnfView.as_view(), name='my_rest_view'),
     url(r'^policy2local/', views.AdaptorLocalView.as_view(), name='my_rest_view'),
+    url(r'^', include(router.urls)),
 ]
