@@ -1,0 +1,28 @@
+{
+    "format":"gcloud",
+    "tenant":"UFPE",
+    "apf":"BRGB",
+    "policy":[
+        {
+            "role":"admin",
+            "permissions":[
+                "compute.instances.get",
+                "compute.instances.create",
+                "compute.instances.update",
+                "compute.instances.delete",
+                "compute.instances.list",
+                "compute.instances.start",
+                "compute.instances.stop",
+                "compute.instances.reset",
+                "compute.instances.suspend",
+                "compute.instances.resume",
+                "compute.instances.attachDisk",
+                "compute.instances.detachDisk",
+                "iam.serviceAccounts.create",
+                "iam.serviceAccounts.delete",
+                "iam.serviceAccounts.get",
+                "iam.serviceAccounts.list"
+            ]
+        }
+    ]
+}

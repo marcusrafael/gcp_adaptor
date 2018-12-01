@@ -1,0 +1,1065 @@
+{
+    "tenant": "UFPE",
+    "apf": "BRGB",
+    "format": "gcloud",
+    "dnf_policy": {
+        "and_rules": [
+            {
+                "conditions": [
+                    {
+                        "value": "compute_service",
+                        "description": "service=compute",
+                        "operator": {
+                            "cloud_technology": null,
+                            "description": "equals",
+                            "name": "="
+                        },
+                        "attribute": {
+                            "cloud_technology": null,
+                            "description": "Service in which the Resource is contained",
+                            "name": "resource.service",
+                            "policy": null
+                        }
+                    },
+                    {
+                        "value": "virtual_machine",
+                        "description": "resource=instances",
+                        "operator": {
+                            "cloud_technology": null,
+                            "description": "equals",
+                            "name": "="
+                        },
+                        "attribute": {
+                            "cloud_technology": null,
+                            "description": "Type of a resource",
+                            "name": "resource.type",
+                            "policy": null
+                        }
+                    },
+                    {
+                        "value": "read",
+                        "description": "action=get",
+                        "operator": {
+                            "cloud_technology": null,
+                            "description": "equals",
+                            "name": "="
+                        },
+                        "attribute": {
+                            "cloud_technology": null,
+                            "description": "Type of an Action",
+                            "name": "action.type",
+                            "policy": null
+                        }
+                    },
+                    {
+                        "value": "administrator",
+                        "description": "role=admin",
+                        "operator": {
+                            "cloud_technology": null,
+                            "description": "equals",
+                            "name": "="
+                        },
+                        "attribute": {
+                            "cloud_technology": null,
+                            "description": "Ontology user's role attribute",
+                            "name": "user.role",
+                            "policy": "BRGB"
+                        }
+                    }
+                ],
+                "description": "admin",
+                "enabled": true
+            },
+            {
+                "conditions": [
+                    {
+                        "value": "compute_service",
+                        "description": "service=compute",
+                        "operator": {
+                            "cloud_technology": null,
+                            "description": "equals",
+                            "name": "="
+                        },
+                        "attribute": {
+                            "cloud_technology": null,
+                            "description": "Service in which the Resource is contained",
+                            "name": "resource.service",
+                            "policy": null
+                        }
+                    },
+                    {
+                        "value": "virtual_machine",
+                        "description": "resource=instances",
+                        "operator": {
+                            "cloud_technology": null,
+                            "description": "equals",
+                            "name": "="
+                        },
+                        "attribute": {
+                            "cloud_technology": null,
+                            "description": "Type of a resource",
+                            "name": "resource.type",
+                            "policy": null
+                        }
+                    },
+                    {
+                        "value": "create",
+                        "description": "action=create",
+                        "operator": {
+                            "cloud_technology": null,
+                            "description": "equals",
+                            "name": "="
+                        },
+                        "attribute": {
+                            "cloud_technology": null,
+                            "description": "Type of an Action",
+                            "name": "action.type",
+                            "policy": null
+                        }
+                    },
+                    {
+                        "value": "administrator",
+                        "description": "role=admin",
+                        "operator": {
+                            "cloud_technology": null,
+                            "description": "equals",
+                            "name": "="
+                        },
+                        "attribute": {
+                            "cloud_technology": null,
+                            "description": "Ontology user's role attribute",
+                            "name": "user.role",
+                            "policy": "BRGB"
+                        }
+                    }
+                ],
+                "description": "admin",
+                "enabled": true
+            },
+            {
+                "conditions": [
+                    {
+                        "value": "compute_service",
+                        "description": "service=compute",
+                        "operator": {
+                            "cloud_technology": null,
+                            "description": "equals",
+                            "name": "="
+                        },
+                        "attribute": {
+                            "cloud_technology": null,
+                            "description": "Service in which the Resource is contained",
+                            "name": "resource.service",
+                            "policy": null
+                        }
+                    },
+                    {
+                        "value": "virtual_machine",
+                        "description": "resource=instances",
+                        "operator": {
+                            "cloud_technology": null,
+                            "description": "equals",
+                            "name": "="
+                        },
+                        "attribute": {
+                            "cloud_technology": null,
+                            "description": "Type of a resource",
+                            "name": "resource.type",
+                            "policy": null
+                        }
+                    },
+                    {
+                        "value": "update",
+                        "description": "action=update",
+                        "operator": {
+                            "cloud_technology": null,
+                            "description": "equals",
+                            "name": "="
+                        },
+                        "attribute": {
+                            "cloud_technology": null,
+                            "description": "Type of an Action",
+                            "name": "action.type",
+                            "policy": null
+                        }
+                    },
+                    {
+                        "value": "administrator",
+                        "description": "role=admin",
+                        "operator": {
+                            "cloud_technology": null,
+                            "description": "equals",
+                            "name": "="
+                        },
+                        "attribute": {
+                            "cloud_technology": null,
+                            "description": "Ontology user's role attribute",
+                            "name": "user.role",
+                            "policy": "BRGB"
+                        }
+                    }
+                ],
+                "description": "admin",
+                "enabled": true
+            },
+            {
+                "conditions": [
+                    {
+                        "value": "compute_service",
+                        "description": "service=compute",
+                        "operator": {
+                            "cloud_technology": null,
+                            "description": "equals",
+                            "name": "="
+                        },
+                        "attribute": {
+                            "cloud_technology": null,
+                            "description": "Service in which the Resource is contained",
+                            "name": "resource.service",
+                            "policy": null
+                        }
+                    },
+                    {
+                        "value": "virtual_machine",
+                        "description": "resource=instances",
+                        "operator": {
+                            "cloud_technology": null,
+                            "description": "equals",
+                            "name": "="
+                        },
+                        "attribute": {
+                            "cloud_technology": null,
+                            "description": "Type of a resource",
+                            "name": "resource.type",
+                            "policy": null
+                        }
+                    },
+                    {
+                        "value": "delete",
+                        "description": "action=delete",
+                        "operator": {
+                            "cloud_technology": null,
+                            "description": "equals",
+                            "name": "="
+                        },
+                        "attribute": {
+                            "cloud_technology": null,
+                            "description": "Type of an Action",
+                            "name": "action.type",
+                            "policy": null
+                        }
+                    },
+                    {
+                        "value": "administrator",
+                        "description": "role=admin",
+                        "operator": {
+                            "cloud_technology": null,
+                            "description": "equals",
+                            "name": "="
+                        },
+                        "attribute": {
+                            "cloud_technology": null,
+                            "description": "Ontology user's role attribute",
+                            "name": "user.role",
+                            "policy": "BRGB"
+                        }
+                    }
+                ],
+                "description": "admin",
+                "enabled": true
+            },
+            {
+                "conditions": [
+                    {
+                        "value": "compute_service",
+                        "description": "service=compute",
+                        "operator": {
+                            "cloud_technology": null,
+                            "description": "equals",
+                            "name": "="
+                        },
+                        "attribute": {
+                            "cloud_technology": null,
+                            "description": "Service in which the Resource is contained",
+                            "name": "resource.service",
+                            "policy": null
+                        }
+                    },
+                    {
+                        "value": "virtual_machine",
+                        "description": "resource=instances",
+                        "operator": {
+                            "cloud_technology": null,
+                            "description": "equals",
+                            "name": "="
+                        },
+                        "attribute": {
+                            "cloud_technology": null,
+                            "description": "Type of a resource",
+                            "name": "resource.type",
+                            "policy": null
+                        }
+                    },
+                    {
+                        "value": "list",
+                        "description": "action=list",
+                        "operator": {
+                            "cloud_technology": null,
+                            "description": "equals",
+                            "name": "="
+                        },
+                        "attribute": {
+                            "cloud_technology": null,
+                            "description": "Type of an Action",
+                            "name": "action.type",
+                            "policy": null
+                        }
+                    },
+                    {
+                        "value": "administrator",
+                        "description": "role=admin",
+                        "operator": {
+                            "cloud_technology": null,
+                            "description": "equals",
+                            "name": "="
+                        },
+                        "attribute": {
+                            "cloud_technology": null,
+                            "description": "Ontology user's role attribute",
+                            "name": "user.role",
+                            "policy": "BRGB"
+                        }
+                    }
+                ],
+                "description": "admin",
+                "enabled": true
+            },
+            {
+                "conditions": [
+                    {
+                        "value": "compute_service",
+                        "description": "service=compute",
+                        "operator": {
+                            "cloud_technology": null,
+                            "description": "equals",
+                            "name": "="
+                        },
+                        "attribute": {
+                            "cloud_technology": null,
+                            "description": "Service in which the Resource is contained",
+                            "name": "resource.service",
+                            "policy": null
+                        }
+                    },
+                    {
+                        "value": "virtual_machine",
+                        "description": "resource=instances",
+                        "operator": {
+                            "cloud_technology": null,
+                            "description": "equals",
+                            "name": "="
+                        },
+                        "attribute": {
+                            "cloud_technology": null,
+                            "description": "Type of a resource",
+                            "name": "resource.type",
+                            "policy": null
+                        }
+                    },
+                    {
+                        "value": "start",
+                        "description": "action=start",
+                        "operator": {
+                            "cloud_technology": null,
+                            "description": "equals",
+                            "name": "="
+                        },
+                        "attribute": {
+                            "cloud_technology": null,
+                            "description": "Type of an Action",
+                            "name": "action.type",
+                            "policy": null
+                        }
+                    },
+                    {
+                        "value": "administrator",
+                        "description": "role=admin",
+                        "operator": {
+                            "cloud_technology": null,
+                            "description": "equals",
+                            "name": "="
+                        },
+                        "attribute": {
+                            "cloud_technology": null,
+                            "description": "Ontology user's role attribute",
+                            "name": "user.role",
+                            "policy": "BRGB"
+                        }
+                    }
+                ],
+                "description": "admin",
+                "enabled": true
+            },
+            {
+                "conditions": [
+                    {
+                        "value": "compute_service",
+                        "description": "service=compute",
+                        "operator": {
+                            "cloud_technology": null,
+                            "description": "equals",
+                            "name": "="
+                        },
+                        "attribute": {
+                            "cloud_technology": null,
+                            "description": "Service in which the Resource is contained",
+                            "name": "resource.service",
+                            "policy": null
+                        }
+                    },
+                    {
+                        "value": "virtual_machine",
+                        "description": "resource=instances",
+                        "operator": {
+                            "cloud_technology": null,
+                            "description": "equals",
+                            "name": "="
+                        },
+                        "attribute": {
+                            "cloud_technology": null,
+                            "description": "Type of a resource",
+                            "name": "resource.type",
+                            "policy": null
+                        }
+                    },
+                    {
+                        "value": "stop",
+                        "description": "action=stop",
+                        "operator": {
+                            "cloud_technology": null,
+                            "description": "equals",
+                            "name": "="
+                        },
+                        "attribute": {
+                            "cloud_technology": null,
+                            "description": "Type of an Action",
+                            "name": "action.type",
+                            "policy": null
+                        }
+                    },
+                    {
+                        "value": "administrator",
+                        "description": "role=admin",
+                        "operator": {
+                            "cloud_technology": null,
+                            "description": "equals",
+                            "name": "="
+                        },
+                        "attribute": {
+                            "cloud_technology": null,
+                            "description": "Ontology user's role attribute",
+                            "name": "user.role",
+                            "policy": "BRGB"
+                        }
+                    }
+                ],
+                "description": "admin",
+                "enabled": true
+            },
+            {
+                "conditions": [
+                    {
+                        "value": "compute_service",
+                        "description": "service=compute",
+                        "operator": {
+                            "cloud_technology": null,
+                            "description": "equals",
+                            "name": "="
+                        },
+                        "attribute": {
+                            "cloud_technology": null,
+                            "description": "Service in which the Resource is contained",
+                            "name": "resource.service",
+                            "policy": null
+                        }
+                    },
+                    {
+                        "value": "virtual_machine",
+                        "description": "resource=instances",
+                        "operator": {
+                            "cloud_technology": null,
+                            "description": "equals",
+                            "name": "="
+                        },
+                        "attribute": {
+                            "cloud_technology": null,
+                            "description": "Type of a resource",
+                            "name": "resource.type",
+                            "policy": null
+                        }
+                    },
+                    {
+                        "value": "reboot",
+                        "description": "action=reset",
+                        "operator": {
+                            "cloud_technology": null,
+                            "description": "equals",
+                            "name": "="
+                        },
+                        "attribute": {
+                            "cloud_technology": null,
+                            "description": "Type of an Action",
+                            "name": "action.type",
+                            "policy": null
+                        }
+                    },
+                    {
+                        "value": "administrator",
+                        "description": "role=admin",
+                        "operator": {
+                            "cloud_technology": null,
+                            "description": "equals",
+                            "name": "="
+                        },
+                        "attribute": {
+                            "cloud_technology": null,
+                            "description": "Ontology user's role attribute",
+                            "name": "user.role",
+                            "policy": "BRGB"
+                        }
+                    }
+                ],
+                "description": "admin",
+                "enabled": true
+            },
+            {
+                "conditions": [
+                    {
+                        "value": "compute_service",
+                        "description": "service=compute",
+                        "operator": {
+                            "cloud_technology": null,
+                            "description": "equals",
+                            "name": "="
+                        },
+                        "attribute": {
+                            "cloud_technology": null,
+                            "description": "Service in which the Resource is contained",
+                            "name": "resource.service",
+                            "policy": null
+                        }
+                    },
+                    {
+                        "value": "virtual_machine",
+                        "description": "resource=instances",
+                        "operator": {
+                            "cloud_technology": null,
+                            "description": "equals",
+                            "name": "="
+                        },
+                        "attribute": {
+                            "cloud_technology": null,
+                            "description": "Type of a resource",
+                            "name": "resource.type",
+                            "policy": null
+                        }
+                    },
+                    {
+                        "value": "suspend",
+                        "description": "action=suspend",
+                        "operator": {
+                            "cloud_technology": null,
+                            "description": "equals",
+                            "name": "="
+                        },
+                        "attribute": {
+                            "cloud_technology": null,
+                            "description": "Type of an Action",
+                            "name": "action.type",
+                            "policy": null
+                        }
+                    },
+                    {
+                        "value": "administrator",
+                        "description": "role=admin",
+                        "operator": {
+                            "cloud_technology": null,
+                            "description": "equals",
+                            "name": "="
+                        },
+                        "attribute": {
+                            "cloud_technology": null,
+                            "description": "Ontology user's role attribute",
+                            "name": "user.role",
+                            "policy": "BRGB"
+                        }
+                    }
+                ],
+                "description": "admin",
+                "enabled": true
+            },
+            {
+                "conditions": [
+                    {
+                        "value": "compute_service",
+                        "description": "service=compute",
+                        "operator": {
+                            "cloud_technology": null,
+                            "description": "equals",
+                            "name": "="
+                        },
+                        "attribute": {
+                            "cloud_technology": null,
+                            "description": "Service in which the Resource is contained",
+                            "name": "resource.service",
+                            "policy": null
+                        }
+                    },
+                    {
+                        "value": "virtual_machine",
+                        "description": "resource=instances",
+                        "operator": {
+                            "cloud_technology": null,
+                            "description": "equals",
+                            "name": "="
+                        },
+                        "attribute": {
+                            "cloud_technology": null,
+                            "description": "Type of a resource",
+                            "name": "resource.type",
+                            "policy": null
+                        }
+                    },
+                    {
+                        "value": "resume",
+                        "description": "action=resume",
+                        "operator": {
+                            "cloud_technology": null,
+                            "description": "equals",
+                            "name": "="
+                        },
+                        "attribute": {
+                            "cloud_technology": null,
+                            "description": "Type of an Action",
+                            "name": "action.type",
+                            "policy": null
+                        }
+                    },
+                    {
+                        "value": "administrator",
+                        "description": "role=admin",
+                        "operator": {
+                            "cloud_technology": null,
+                            "description": "equals",
+                            "name": "="
+                        },
+                        "attribute": {
+                            "cloud_technology": null,
+                            "description": "Ontology user's role attribute",
+                            "name": "user.role",
+                            "policy": "BRGB"
+                        }
+                    }
+                ],
+                "description": "admin",
+                "enabled": true
+            },
+            {
+                "conditions": [
+                    {
+                        "value": "compute_service",
+                        "description": "service=compute",
+                        "operator": {
+                            "cloud_technology": null,
+                            "description": "equals",
+                            "name": "="
+                        },
+                        "attribute": {
+                            "cloud_technology": null,
+                            "description": "Service in which the Resource is contained",
+                            "name": "resource.service",
+                            "policy": null
+                        }
+                    },
+                    {
+                        "value": "virtual_machine",
+                        "description": "resource=instances",
+                        "operator": {
+                            "cloud_technology": null,
+                            "description": "equals",
+                            "name": "="
+                        },
+                        "attribute": {
+                            "cloud_technology": null,
+                            "description": "Type of a resource",
+                            "name": "resource.type",
+                            "policy": null
+                        }
+                    },
+                    {
+                        "value": "add",
+                        "description": "action=attachDisk",
+                        "operator": {
+                            "cloud_technology": null,
+                            "description": "equals",
+                            "name": "="
+                        },
+                        "attribute": {
+                            "cloud_technology": null,
+                            "description": "Type of an Action",
+                            "name": "action.type",
+                            "policy": null
+                        }
+                    },
+                    {
+                        "value": "administrator",
+                        "description": "role=admin",
+                        "operator": {
+                            "cloud_technology": null,
+                            "description": "equals",
+                            "name": "="
+                        },
+                        "attribute": {
+                            "cloud_technology": null,
+                            "description": "Ontology user's role attribute",
+                            "name": "user.role",
+                            "policy": "BRGB"
+                        }
+                    }
+                ],
+                "description": "admin",
+                "enabled": true
+            },
+            {
+                "conditions": [
+                    {
+                        "value": "compute_service",
+                        "description": "service=compute",
+                        "operator": {
+                            "cloud_technology": null,
+                            "description": "equals",
+                            "name": "="
+                        },
+                        "attribute": {
+                            "cloud_technology": null,
+                            "description": "Service in which the Resource is contained",
+                            "name": "resource.service",
+                            "policy": null
+                        }
+                    },
+                    {
+                        "value": "virtual_machine",
+                        "description": "resource=instances",
+                        "operator": {
+                            "cloud_technology": null,
+                            "description": "equals",
+                            "name": "="
+                        },
+                        "attribute": {
+                            "cloud_technology": null,
+                            "description": "Type of a resource",
+                            "name": "resource.type",
+                            "policy": null
+                        }
+                    },
+                    {
+                        "value": "remove",
+                        "description": "action=detachDisk",
+                        "operator": {
+                            "cloud_technology": null,
+                            "description": "equals",
+                            "name": "="
+                        },
+                        "attribute": {
+                            "cloud_technology": null,
+                            "description": "Type of an Action",
+                            "name": "action.type",
+                            "policy": null
+                        }
+                    },
+                    {
+                        "value": "administrator",
+                        "description": "role=admin",
+                        "operator": {
+                            "cloud_technology": null,
+                            "description": "equals",
+                            "name": "="
+                        },
+                        "attribute": {
+                            "cloud_technology": null,
+                            "description": "Ontology user's role attribute",
+                            "name": "user.role",
+                            "policy": "BRGB"
+                        }
+                    }
+                ],
+                "description": "admin",
+                "enabled": true
+            },
+            {
+                "conditions": [
+                    {
+                        "value": "security_service",
+                        "description": "service=iam",
+                        "operator": {
+                            "cloud_technology": null,
+                            "description": "equals",
+                            "name": "="
+                        },
+                        "attribute": {
+                            "cloud_technology": null,
+                            "description": "Service in which the Resource is contained",
+                            "name": "resource.service",
+                            "policy": null
+                        }
+                    },
+                    {
+                        "value": "user",
+                        "description": "resource=serviceAccounts",
+                        "operator": {
+                            "cloud_technology": null,
+                            "description": "equals",
+                            "name": "="
+                        },
+                        "attribute": {
+                            "cloud_technology": null,
+                            "description": "Type of a resource",
+                            "name": "resource.type",
+                            "policy": null
+                        }
+                    },
+                    {
+                        "value": "create",
+                        "description": "action=create",
+                        "operator": {
+                            "cloud_technology": null,
+                            "description": "equals",
+                            "name": "="
+                        },
+                        "attribute": {
+                            "cloud_technology": null,
+                            "description": "Type of an Action",
+                            "name": "action.type",
+                            "policy": null
+                        }
+                    },
+                    {
+                        "value": "administrator",
+                        "description": "role=admin",
+                        "operator": {
+                            "cloud_technology": null,
+                            "description": "equals",
+                            "name": "="
+                        },
+                        "attribute": {
+                            "cloud_technology": null,
+                            "description": "Ontology user's role attribute",
+                            "name": "user.role",
+                            "policy": "BRGB"
+                        }
+                    }
+                ],
+                "description": "admin",
+                "enabled": true
+            },
+            {
+                "conditions": [
+                    {
+                        "value": "security_service",
+                        "description": "service=iam",
+                        "operator": {
+                            "cloud_technology": null,
+                            "description": "equals",
+                            "name": "="
+                        },
+                        "attribute": {
+                            "cloud_technology": null,
+                            "description": "Service in which the Resource is contained",
+                            "name": "resource.service",
+                            "policy": null
+                        }
+                    },
+                    {
+                        "value": "user",
+                        "description": "resource=serviceAccounts",
+                        "operator": {
+                            "cloud_technology": null,
+                            "description": "equals",
+                            "name": "="
+                        },
+                        "attribute": {
+                            "cloud_technology": null,
+                            "description": "Type of a resource",
+                            "name": "resource.type",
+                            "policy": null
+                        }
+                    },
+                    {
+                        "value": "delete",
+                        "description": "action=delete",
+                        "operator": {
+                            "cloud_technology": null,
+                            "description": "equals",
+                            "name": "="
+                        },
+                        "attribute": {
+                            "cloud_technology": null,
+                            "description": "Type of an Action",
+                            "name": "action.type",
+                            "policy": null
+                        }
+                    },
+                    {
+                        "value": "administrator",
+                        "description": "role=admin",
+                        "operator": {
+                            "cloud_technology": null,
+                            "description": "equals",
+                            "name": "="
+                        },
+                        "attribute": {
+                            "cloud_technology": null,
+                            "description": "Ontology user's role attribute",
+                            "name": "user.role",
+                            "policy": "BRGB"
+                        }
+                    }
+                ],
+                "description": "admin",
+                "enabled": true
+            },
+            {
+                "conditions": [
+                    {
+                        "value": "security_service",
+                        "description": "service=iam",
+                        "operator": {
+                            "cloud_technology": null,
+                            "description": "equals",
+                            "name": "="
+                        },
+                        "attribute": {
+                            "cloud_technology": null,
+                            "description": "Service in which the Resource is contained",
+                            "name": "resource.service",
+                            "policy": null
+                        }
+                    },
+                    {
+                        "value": "user",
+                        "description": "resource=serviceAccounts",
+                        "operator": {
+                            "cloud_technology": null,
+                            "description": "equals",
+                            "name": "="
+                        },
+                        "attribute": {
+                            "cloud_technology": null,
+                            "description": "Type of a resource",
+                            "name": "resource.type",
+                            "policy": null
+                        }
+                    },
+                    {
+                        "value": "read",
+                        "description": "action=get",
+                        "operator": {
+                            "cloud_technology": null,
+                            "description": "equals",
+                            "name": "="
+                        },
+                        "attribute": {
+                            "cloud_technology": null,
+                            "description": "Type of an Action",
+                            "name": "action.type",
+                            "policy": null
+                        }
+                    },
+                    {
+                        "value": "administrator",
+                        "description": "role=admin",
+                        "operator": {
+                            "cloud_technology": null,
+                            "description": "equals",
+                            "name": "="
+                        },
+                        "attribute": {
+                            "cloud_technology": null,
+                            "description": "Ontology user's role attribute",
+                            "name": "user.role",
+                            "policy": "BRGB"
+                        }
+                    }
+                ],
+                "description": "admin",
+                "enabled": true
+            },
+            {
+                "conditions": [
+                    {
+                        "value": "security_service",
+                        "description": "service=iam",
+                        "operator": {
+                            "cloud_technology": null,
+                            "description": "equals",
+                            "name": "="
+                        },
+                        "attribute": {
+                            "cloud_technology": null,
+                            "description": "Service in which the Resource is contained",
+                            "name": "resource.service",
+                            "policy": null
+                        }
+                    },
+                    {
+                        "value": "user",
+                        "description": "resource=serviceAccounts",
+                        "operator": {
+                            "cloud_technology": null,
+                            "description": "equals",
+                            "name": "="
+                        },
+                        "attribute": {
+                            "cloud_technology": null,
+                            "description": "Type of a resource",
+                            "name": "resource.type",
+                            "policy": null
+                        }
+                    },
+                    {
+                        "value": "list",
+                        "description": "action=list",
+                        "operator": {
+                            "cloud_technology": null,
+                            "description": "equals",
+                            "name": "="
+                        },
+                        "attribute": {
+                            "cloud_technology": null,
+                            "description": "Type of an Action",
+                            "name": "action.type",
+                            "policy": null
+                        }
+                    },
+                    {
+                        "value": "administrator",
+                        "description": "role=admin",
+                        "operator": {
+                            "cloud_technology": null,
+                            "description": "equals",
+                            "name": "="
+                        },
+                        "attribute": {
+                            "cloud_technology": null,
+                            "description": "Ontology user's role attribute",
+                            "name": "user.role",
+                            "policy": "BRGB"
+                        }
+                    }
+                ],
+                "description": "admin",
+                "enabled": true
+            }
+        ]
+    }
+}
