@@ -16,10 +16,11 @@ class Attribute(models.Model):
     name = models.CharField(max_length=255)
     description = models.CharField(max_length=255)
     ontology = models.BooleanField(default=False)
+    enumerated = models.BooleanField(default=False)
 
 class Operator(models.Model):
-    tenant = models.ForeignKey(Tenant, on_delete=models.CASCADE, null=True)
-    apf = models.ForeignKey(Apf, on_delete=models.CASCADE, null=True)
+#    tenant = models.ForeignKey(Tenant, on_delete=models.CASCADE, null=True)
+#    apf = models.ForeignKey(Apf, on_delete=models.CASCADE, null=True)
     name = models.CharField(max_length=255)
     description = models.CharField(max_length=255)
     ontology = models.BooleanField(default=False)

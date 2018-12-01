@@ -25,6 +25,7 @@ def get_apf(apf_nm):
 
 # Return the Attribute object given a name and if the attribute is or not in the ontology
 def get_attribute(attr, att_apf, att_ten, ont):
+    print("START get_attribute {0}".format(attr))
     attribute = None
     try:
         attribute = models.Attribute.objects.get(apf = att_apf.id, tenant = att_ten.id, ontology = ont, name = attr)
@@ -40,24 +41,32 @@ def get_attribute(attr, att_apf, att_ten, ont):
                 except:
                     # print("  ", attr, att_apf, ten, ont)
                     pass
+    if hasattr(attribute, '__dict__'):
+        print("END get_attribute {0}".format(attribute.name))
     return attribute
 
 # Return the Operator object given a name and if the operator is or not in the ontology
 def get_operator(op, ont):
+    print("START get_operator {0}".format(op))
     operator = None
     try:
         operator = models.Operator.objects.get(ontology = ont, name = op)
     except:
         pass
+    if hasattr(operator, '__dict__'):
+        print("END get_operator {0}".format(operator.name))
     return operator
 
 # Return the Value object given a name and the attribute id
 def get_value(val, attr):
+    print("START get_value {0}".format(val))
     value = None
     try:
         value = models.Value.objects.get(attribute_id = attr.id, name = val)
     except:
         pass
+    if hasattr(value, '__dict__'):
+        print("END get_value {0} : {1}".format(value.name, attr.name))
     return value
 
 # Receive a value and return a list of variables
@@ -74,8 +83,10 @@ def parse_variables(value, ont):
         elif local_tech == "aws":
             var = re.compile('(\$\{[^\}]*\})')
             vars = var.findall(value)
+        elif local_tech == "gcloud":
+            pass
         else:
-            print("Error: Cloud technology "+local_tech+" is not supported.")
+            print("Error 3: Cloud technology "+local_tech+" is not supported.")
 
     return vars
 
@@ -202,8 +213,10 @@ def is_local_variable(val):
         var = re.compile('%\(([^\)]*)\)s')
     elif local_tech == "aws":
         var = re.compile('\$\{([^\}]*)\}')
+    elif local_tech == "gcloud":
+        return False
     else:
-        print("Error: Cloud technology "+local_tech+" is not supported.")
+        print("Error 1: Cloud technology "+local_tech+" is not supported.")
         unknown_tech = True
 
     if not unknown_tech:
@@ -222,7 +235,7 @@ def split_values(values):
     elif local_tech == "aws":
         var = re.compile('\$\{([^\}]*)\}')
     else:
-        print("Error: Cloud technology "+local_tech+" is not supported.")
+        print("Error 2: Cloud technology "+local_tech+" is not supported.")
         unknown_tech = True
 
     consts = []

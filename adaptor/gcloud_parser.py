@@ -1,13 +1,13 @@
 from pprint import pprint
 
-def policy2dnf(policies):
+def policy2dnf(policy):
 
     dnf_policy = {}
     and_rules = []
 
     attributes = ["service", "resource", "action"]
 
-    for role_and_permissions in policies: # [{role, permission}, ...]
+    for role_and_permissions in policy: # [{role, permission}, ...]
         conditions = []
         for permission in role_and_permissions["permissions"]:
             for index, value in enumerate(permission.split(".")):
@@ -41,10 +41,10 @@ def policy2dnf(policies):
     return dnf_policy
 
 
-def policy2local(policies):
+def policy2local(dnf_policy):
     final = []
     policy = {}
-    for conditions in policies["dnf_policy"]["and_rules"]:
+    for conditions in dnf_policy["and_rules"]:
         pprint(conditions)
         permission = ""
         for condition in conditions["conditions"]:

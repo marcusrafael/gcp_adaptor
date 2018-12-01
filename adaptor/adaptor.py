@@ -20,6 +20,7 @@ def policy2dnf(policy, tenant, apf):
 def policy2local(dnf_policy, tenant, apf):
     resp = {}
     locpol = semantic_parser.semantic2local(dnf_policy, tenant, apf)
+    print(locpol)
     if (locpol):
         parsedpol = gcloud_parser.policy2local(locpol)
     if (parsedpol):
