@@ -58,6 +58,9 @@ class AdaptorDnfView(APIView):
             return Response(resp, status=412)
         elif (request.data["format"] == "gcloud"):
             resp = adaptor.policy2dnf(request.data["policy"], request.data["tenant"], request.data["apf"])
+            resp["format"]=request.data["format"]
+            resp["tenant"]=request.data["tenant"]
+            resp["apf"]=request.data["apf"]
             return Response(resp)
         else:
             resp['detail'] = "Policy Format not Supported."
@@ -71,6 +74,9 @@ class AdaptorLocalView(APIView):
             return Response(resp, status=412)
         elif (request.data["format"] == "gcloud"):
             resp = adaptor.policy2local(request.data["dnf_policy"], request.data["tenant"], request.data["apf"])
+            resp["format"]=request.data["format"]
+            resp["tenant"]=request.data["tenant"]
+            resp["apf"]=request.data["apf"]
             return Response(resp)
         else:
             resp['detail'] = "Policy Format not Supported."

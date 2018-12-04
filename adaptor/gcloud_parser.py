@@ -42,23 +42,23 @@ def policy2dnf(policy):
 
 
 def policy2local(dnf_policy):
-    final = []
-    policy = {}
-    for conditions in dnf_policy["and_rules"]:
-        pprint(conditions)
-        permission = ""
-        for condition in conditions["conditions"]:
-            value = condition["value"]
-            if (permission.count(".") < 2):
-                permission = permission + value + "."
-            elif ("/" not in value):
-                permission = permission + value
-            elif ("/" in value):
-                role = value
-        if not role in policy:
-            policy[role] = []
-        policy[role].append(permission)
-    for key in policy:
-        final.append({"role": key, "permissions": policy[key]})
-    pprint(final)
-    return final
+    policy = []
+    role_permissions_mapping = {}
+    for rule in dnf_policy["and_rules"]:
+        permission = {}
+        for condition in rule["conditions"]:
+            permission[condition["attribute"]] = condition["value"]
+
+        formated_permission = "{0}.{1}.{2}".format(permission["service"],
+                                                   permission["resource"],
+                                                   permission["action"])
+        role = permission["role"]
+        if role in role_permissions_mapping:
+            role_permissions_mapping[role].append(formated_permission)
+        else:
+            role_permissions_mapping[role] = [formated_permission]
+
+    for role in role_permissions_mapping.keys():
+        policy.append({"role": role, "permissions": role_permissions_mapping[role]})
+
+    return policy
