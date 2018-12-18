@@ -43,22 +43,38 @@ def policy2dnf(policy):
 
 def policy2local(dnf_policy):
     policy = []
-    role_permissions_mapping = {}
-    for rule in dnf_policy["and_rules"]:
-        permission = {}
-        for condition in rule["conditions"]:
-            permission[condition["attribute"]] = condition["value"]
+    if 'and_rules' in dnf_policy: # If there is no and_rules, just return an empty policy
+        for and_rule in dnf_policy['and_rules']: # For each and_rule
+            enabled = True
+            if 'enabled' in and_rule:
+                enabled = and_rule['enabled']
+            if enabled:  # If it is enabled
+                role = ""
+                service = ""
+                resource = ""
+                action  = ""
+                for cond in and_rule['conditions']: # Check all Conditions
+                    print(cond)
+                    if 'attribute' in cond:
+                        if cond['attribute'] == "role":    # Retrieve the Role
+                            role = cond['value']
+                        if cond['attribute'] == "service":    # Retrieve the Service
+                            service = cond['value']
+                        elif cond['attribute'] == "resource":   # Retrieve the Resource
+                            resource = cond['value']
+                        elif cond['attribute'] == "action":   # Retrieve the Action
+                            action = cond['value']
 
-        formated_permission = "{0}.{1}.{2}".format(permission["service"],
-                                                   permission["resource"],
-                                                   permission["action"])
-        role = permission["role"]
-        if role in role_permissions_mapping:
-            role_permissions_mapping[role].append(formated_permission)
-        else:
-            role_permissions_mapping[role] = [formated_permission]
+                        if(not service or not resource or not action):
+                            continue
+                        permission = "{0}.{1}.{2}".format(service, resource, action)
 
-    for role in role_permissions_mapping.keys():
-        policy.append({"role": role, "permissions": role_permissions_mapping[role]})
+                        if len(policy) == 0:
+                            policy.append({'role': role, 'permissions': [permission]})
 
+                        else:
+                            for r in policy:
+                                if r["role"] == role:
+                                    if permission not in r["permissions"]:
+                                        r["permissions"].append(permission)
     return policy
